@@ -1,6 +1,7 @@
 <div align="center">
-    
-## ⚕️ ***HEROKU DEPLOY GUIDE***
+<!-- <img src="https://i0.wp.com/gluonhq.com/wp-content/uploads/2018/05/heroku-logotype-vertical-purple.png" alt="Heorku Image" align="right" width="150">-->
+
+# ⚕️ ***HEROKU DEPLOY GUIDE***
 
 </div>
 
@@ -8,13 +9,14 @@
 
 ### 1️⃣ ***METHOD 1: (Google Collab Guide)***
 
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SilentDemonSD/WZ-Deploy/blob/main/wzv3_hk_deploy.ipynb)
-
 <details>
   <summary><b>Expand All Steps to Deploy <sup><kbd>Click Here</kbd></sup></b></summary>
 
-  
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SilentDemonSD/WZ-Deploy/blob/main/wzv3_hk_deploy.ipynb)
+
+**Step 1 :** 
+
+
 
 </details>
 
@@ -24,6 +26,47 @@
 
 <details>
   <summary><b>Expand All Steps to Deploy <sup><kbd>Click Here</kbd></sup></b></summary>
+
+**Step 1 :** Fork and Star the Repository
+
+  - Click the **Fork** button at the top-right corner of this repository.
+    > Star the repository to show your support.
+
+**Step 2 :** Navigate to Your Forked Repository
+
+- Access your forked version of the repository.
+
+**Step 3 :** Enable `GitHub Actions` for your repo
+
+- Go to the **Settings** tab of your forked repository.
+- Enable **Actions** by selecting the appropriate option in the settings.
+
+**Step 4 :** Run the Deployment Workflow to Deploy
+
+  1. Open the **Actions** tab.
+  2. Select the `Deploy to Heroku` workflow from the available list.
+  3. Click **Run workflow** and fill out the required inputs:
+     
+   - **BOT_TOKEN**: Your Telegram bot token.
+   - **OWNER_ID**: Your Telegram ID.
+   - **DATABASE_URL**: MongoDB connection string.
+   - **TELEGRAM_API**: Telegram API ID (from [my.telegram.org](https://my.telegram.org/)).
+   - **TELEGRAM_HASH**: Telegram API hash (from [my.telegram.org](https://my.telegram.org/)).
+   - **HEROKU_APP_NAME**: Name of your Heroku app.
+   - **HEROKU_EMAIL**: Email address associated with your Heroku account.
+   - **HEROKU_API_KEY**: API key from your Heroku account.
+   - **HEROKU_TEAM_NAME** (Optional): Required only if deploying under a Heroku team account.
+   - **UPSTREAM_REPO**: Upstream Repo of your Fork or Main Repo
+     
+  4. Run the workflow and wait for it to complete.
+
+
+**Step 5 :** Finalize Setup of your bot
+
+- After deployment, check logs in your Heroku dashboard, If problem, Reach to Support Group.
+- Use the `/bsettings` command to upload sensitive files like `token.pickle` if needed as well as all the important Variables within it.
+  > **NOTE** : Don't Add any Other variable except the Variables mentioned here.
+
 
 </details>
 
