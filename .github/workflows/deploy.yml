@@ -43,12 +43,9 @@ jobs:
 
       - name: Clean File(s)
         run: |
-          if [ -f "./README.md" ]; then
-            echo "Deleting file: README.md"
-            rm -f ./README.md
-          else
-            echo "File not found: README.md"
-          fi
+          for file in README.md wzv3_hk_deploy.ipynb; do
+            [ -f "$file" ] && echo "Deleting: $file" && rm -f "$file" || echo "Not found: $file"
+          done
 
       - name: Install Heroku CLI
         run: |
