@@ -38,7 +38,7 @@
 > Make sure git is Installed in your system or quick run `apt-get install git pip curl -y`
 
 ```shell
-git clone https://gitlab.com/mysterysd.sd/WZML-X && cd WZML-X 
+git clone https://github.com/SilentDemonSD/WZ-Deploy wzbot && cd wzbot
 ```
 
 **Step 2 :** Now Install Heroku in your Sytem or checkout Official Heroku Deploy Docs, or Download via `apt-get` or `npm`
@@ -103,9 +103,9 @@ nano config.py
 - **Sample config.py** _(Copy these and Paste in Editor and Fill Up)_
   ```
   BOT_TOKEN = ""
-  TELEGRAM_API = 
+  TELEGRAM_API = 0
   TELEGRAM_HASH = ""
-  OWNER_ID = 
+  OWNER_ID = 0
   UPSTREAM_REPO = ""
   UPSTREAM_BRANCH = "wzv3"
   DATABASE_URL = ""
@@ -136,7 +136,7 @@ git push heroku main -f
 
 **Heroku Logs:** When checking Logs, Use this will give Complete Logs.
 ```shell
-heroku logs -a APP_NAME
+heroku logs -a APP_NAME -t
 ```
 
 - Add arg `-t` for Live Stream Logs and Use `CTRL + C` to Exit from it.
