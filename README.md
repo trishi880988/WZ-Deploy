@@ -1,12 +1,34 @@
-# **HEROKU DEPLOY GUIDE**
+<div align="center">
+    
+## ⚕️ ***HEROKU DEPLOY GUIDE***
+
+</div>
 
 ---
 
-## ***METHOD 1: (Google Collab Guide)***
+### 1️⃣ ***METHOD 1: (Google Collab Guide)***
 
-## ***METHOD 2: (Github Workflow Guide)***
 
-## ***METHOD 3: (Heroku CLI Guide)***
+
+<details>
+  <summary><b>Expand All Steps to Deploy <sup><kbd>Click Here</kbd></sup></b></summary>
+
+  
+
+</details>
+
+---
+
+### 2️⃣ ***METHOD 2: (Github Workflow Guide)***
+
+<details>
+  <summary><b>Expand All Steps to Deploy <sup><kbd>Click Here</kbd></sup></b></summary>
+
+</details>
+
+---
+
+### 3️⃣ ***METHOD 3: (Heroku CLI Guide)***
 
 <details>
   <summary><b>Expand All Steps to Deploy <sup><kbd>Click Here</kbd></sup></b></summary>
@@ -80,9 +102,9 @@ nano config.py
 - **Sample config.py** _(Copy these and Paste in Editor and Fill Up)_
   ```
   BOT_TOKEN = ""
-  TELEGRAM_API = ""
+  TELEGRAM_API = 
   TELEGRAM_HASH = ""
-  OWNER_ID = ""
+  OWNER_ID = 
   UPSTREAM_REPO = ""
   UPSTREAM_BRANCH = "wzv3"
   DATABASE_URL = ""
@@ -124,29 +146,28 @@ heroku logs -a APP_NAME
 
 ---
 
-## ***Variables Description:***
+### 🔠 ***Variables Description:***
 
 <details>
   <summary><b>View All Variables <sup><kbd>Click Here</kbd></sup></b></summary>
 
-    - `BOT_TOKEN`: Telegram Bot Token that you got from [BotFather](https://t.me/BotFather). `Str`
-    - `OWNER_ID`: Telegram User ID (not username) of the Owner of the bot. `Int`
-    - `TELEGRAM_API`: This is to authenticate your Telegram account for downloading Telegram files. You can get this from <https://my.telegram.org>. `Int`
-    - `TELEGRAM_HASH`: This is to authenticate your Telegram account for downloading Telegram files. You can get this from <https://my.telegram.org>. `Str`
-    - `BASE_URL`: Valid BASE URL where the bot is deployed to use torrent web files selection. Format of URL should be `https://app-name-random_code.herokuapp.com/`, where `app-name` is the name of your heroku app Paste the URL got when the App was Made. `Str`
-    - `DATABASE_URL`: Database URL of MongoDb to store all your files and Vars. Adding this will be Helpful. `Str`
-    - `UPSTREAM_REPO`: GitLab repository URL, if your repo is private add `https://<deploy_token>:<password>@gitlab.com/<your_username>/<repository_name>
-    ` format. `Str`.
-      - **NOTE**: Don't forget to remove '<' and '>'. To generate gitlab Deploy Token. Follow [This](https://docs.gitlab.com/ee/user/project/deploy_tokens/#create-a-deploy-token)
-                  - Any change in docker you need to deploy/build again with updated repo to take effect. 
-                  - **No Need to delete .gitignore file or any File**
-    - `UPSTREAM_BRANCH`: Upstream branch for update. Default is `hk_wzmlx`. `Str`
+- `BOT_TOKEN`: Telegram Bot Token that you got from [BotFather](https://t.me/BotFather). `Str`
+- `OWNER_ID`: Telegram User ID (not username) of the Owner of the bot. `Int`
+- `TELEGRAM_API`: This is to authenticate your Telegram account for downloading Telegram files. You can get this from <https://my.telegram.org>. `Int`
+- `TELEGRAM_HASH`: This is to authenticate your Telegram account for downloading Telegram files. You can get this from <https://my.telegram.org>. `Str`
+- `BASE_URL`: Valid BASE URL where the bot is deployed to use torrent web files selection. Format of URL should be `https://app-name-random_code.herokuapp.com/`, where `app-name` is the name of your heroku app Paste the URL got when the App was Made. `Str`
+- `DATABASE_URL`: Database URL of MongoDb to store all your files and Vars. Adding this will be Helpful. `Str`
+- `UPSTREAM_REPO`: GitLab repository URL, if your repo is private add `https://<deploy_token>:<password>@gitlab.com/<your_username>/<repository_name>` format. `Str`.
+    - **NOTE**: Don't forget to remove '<' and '>'. To generate gitlab Deploy Token. Follow [This](https://docs.gitlab.com/ee/user/project/deploy_tokens/#create-a-deploy-token)
+        - Any change in docker you need to deploy/build again with updated repo to take effect. 
+        - **No Need to delete .gitignore file or any File**
+- `UPSTREAM_BRANCH`: Upstream branch for update. Default is `wzv3`. `Str`
 
 </details>
 
 ---
 
-## ***Branch Specifications:***
+### ⚠️ ***Branch Specifications:***
 
 - All files to be Uploaded in this `main` Branch and set Upstream as `wzv3` Branch of actual repo.
 
